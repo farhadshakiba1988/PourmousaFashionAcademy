@@ -1,0 +1,382 @@
+{% load static %}
+{% static 'images' as baseUrl %}
+{% load thumbnail %}
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+          integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+    <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: Sahel;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css/reboot.css' %}">
+
+    <title>PourmousaFashionAcademy</title>
+</head>
+<body>
+
+<!-- navbar -->
+<div class="sticky-top bg-white p-2 shadow" style="--bs-bg-opacity: 0.95">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="#">آموزشگاه طراحی و دوخت پورموسی</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navbarFeatures">ویزگی ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navbarBlog">سیلابیس دروس</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navbarTeam">تیم ما</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#navbarContact">تماس با ما</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-lg-end" style="width: 185px;">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#getStartedModal">
+                        شروع کنید
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="getStartedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">همین حالا شروع کنید!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label"> برای عضویت در خبرنامه ایمیل حود را وارد
+                            کنید </label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
+                    </div>
+                    <button class="btn btn-primary">عضویت</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- back to top -->
+<a href="#"
+   class="bg-warning text-dark d-flex rounded-circle justify-content-center align-items-center position-fixed opacity-75"
+   style="width: 54px; height: 54px; right: 10px; bottom: 10px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-arrow-up"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+</a>
+
+<!-- header -->
+<div class="py-4">
+    <header class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h4 class="mb-4">مدیر و موسس <br><span class="text-gray-dark">استاد فاطمه پورموسی<br><br><br></span>
+                    آینده حرفه ای و کاری خود را بسازید</h4>
+                <p class="lead text-muted mb-4">مدیر و مربی نمونه سال های 1389, 1391, 1393, 1394 <br>مدرس جهاد
+                    دانشگاهی
+                    و مجله کودک در رشته تخصصی لباس عروس<br>مدرس شبکه سه سیما و شبکه پنج سیما (به خانه بر می
+                    گردیم)<br>آموشگاه
+                    منتحب هشتمین جشنواره بین المللی فجر</p>
+                <div class="text-center text-md-start">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#getStartedModal">
+                        شروع کنید
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'base/img/1.jpg' %}" class="img-fluid " width="460px">
+            </div>
+        </div>
+    </header>
+</div>
+
+<!-- Features -->
+<div class="py-4 bg-primary" id="navbarFeatures">
+    <section class="container">
+        <h2 class="text-center display-5 mt-5">امتیازات آموشگاه</h2>
+        <p class="lead text-muted mb-5 pb-3 text-center">تدریس دروس توسط استاد فاطمه پور موسی و دیگر اساتید برتر
+            کشور<br>اعطای مدرک بین المللی<br>پیش نیاز آزمون فنی حرفه ای و معرفی برای آزمون فنی حرفه ای کشور</p>
+        <div class="row gy-4 pb-5">
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/nazok.jpg' %}" width="120" height="120"/>
+                        <h5 class="card-title mt-4">نازک دوزی و ضخیم دوزی</h5>
+                        <p class="card-text text-muted lead">یک دوره کامل که پس از گذراندن آن تمام احتیاجات خود و
+                            خانواده تان را به طور کامل برآورده کرده و با گرفتن مدرک می توانید پایه و اساس مزون خود را
+                            راه اندازی کنید</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/shab.jpg' %}" width="120" height="120"/>
+
+                        <h5 class="card-title mt-4"> لباس شب</h5>
+                        <p class="card-text text-muted lead">ما مفتخریم که می توانیم دوره های فوق تخصص شب و عروس را با
+                            بروزترین متد های اروپایی برگزار کنیم<br>هنرجویان دوره تخصصی لباس شب و عروس ما از تهران و
+                            اکثر شهرهای ایران می باشند</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/shab.jpg' %}" width="120" height="120"/>
+
+                        <h5 class="card-title mt-4">دوره فوق تخصص دراپاژ و دراپینگ</h5>
+                        <p class="card-text text-muted lead"> گذراندن این دوره هنرجو می بایست به تمامی رمز خیاطی آشنایی
+                            داشته باشد و دوره شب و مجلسی و عروس به ویژه مولاژ را گذرانده باشد ، زیرا پیش نیاز این دوره
+                            آشنایی به ساخت مانکن و کار با آن می باشد</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/tarh.jpg' %}" width="120" height="120"/>
+
+                        <h5 class="card-title mt-4">دوره طراحی لباس</h5>
+                        <p class="card-text text-muted lead">دوره طراحی ما شامل سه دوره مقدماتی پیشرفته و فوق پیشرفته می
+                            باشد که در پایان دوره هنرجویان مستعد و خلاق ، به تولیدی های معروف و برند ها معرفی می شوند پس
+                            از کسب مدرک طراحی خود به راحتی می‌توانند جذب بازار کار شوند</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/tanbor.jpg' %}" width="120" height="120"/>
+
+                        <h5 class="card-title mt-4">دوره سوزن تنبور</h5>
+                        <p class="card-text text-muted lead"> جدیدترین دوره‌ای که در حال حاضر در ایران برگزار می گردد و
+                            روش آشنایی با سوزن تنبور ، شناخت کارگاه ، وصل پارچه های کشی تور به کارگاه ، آشنایی با مواد و
+                            ابزار لازم ، از مشخصات این دوره می باشد</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-4">
+                <div class="card p-5">
+                    <div class="card-body text-center">
+                        <img class="text-primary" src="{% static 'base/img/digar.png' %}" width="120" height="120"/>
+
+                        <h5 class="card-title mt-4">از دیگر آموزش های آکادمی پورموسی</h5>
+                        <p class="card-text text-muted lead"> الگوسازی و برشکاری ، مانتو دوز ، یقه های سه بعدی ، جیب های
+                            فانتزی ، چهل تیکه دوزی با دست و چرخ و… می باشد که هرکدام تنوع و زیبایی خاص خود را دارد.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- vuejs -->
+<div class="py-4">
+    <section class="container">
+        <div class="row align-items-center" style="height: 450px">
+            <div class="col-md-6">
+                <h2 class="display-4 mb-4"><span style="color: #4dba87;">با شما</span> هستیم <span
+                        style="color: #4dba87;">تا اوج </span> موفقیت</h2>
+                <p class="lead mb-4" style="color: #800080;">آشنایی بیشتر با نحوه برگزاری کلاس های آموزشگاه خیاطی
+                    پورموسی</p>
+                <p class="lead text-muted mb-4">کلاس ها تک ساعتی که در برگه قرارداد کارآموزی بین هنرجو آکادمی طراحی دوخت
+                    پورموسی منعقد می گردد برگزار می‌شود ، آکادمی متعهد می شود قرارداد ساعت های آموزشی خود را به پایان
+                    برساند و این نویدی است برای هنرجویانی که دوره‌های خاص و کوتاه مدت را انتخاب می کنند. تمامی کلاس ها
+                    به صورت عمومی برگزار می گردد و این کلاس‌ها در هنرجویان انگیزه بیشتری ایجاد می کند چون علاوه بر کار
+                    خود و معایب آن با کار هنرجویان دیگر و معایب اندامی افراد مختلف آشنا می‌شوند به این روش تدریس بهترین
+                    و بیشترین بازده و راندمان کاری را دارد</p>
+                <div class="text-center text-md-start">
+                    <a href="#" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        مطالعه بیشتر
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'base/img/ouj.jpg' %}" class="img-fluid" width="340">
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- reactjs -->
+<div class="py-4" style="background-color: #081828;">
+    <section class="container">
+        <div class="row align-items-center" style="height: 550px">
+            <div class="col-md-6">
+                <img src="{% static 'base/img/svab.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h2 class="display-10 mb-4 text-white">سوابق و مهارت های <span class="text-warning">استاد پورموسی</span>
+                </h2>
+                <p class="lead text-white mb-4">مدیر و موسس و مربی در کلیه رشته های طراحی و دوخت از سال ۱۳۷۲ تاکنون
+                    (دریافت مجوز تاسیس در سال ۱۳۷۲ در شهر تهران)
+                    <br>مدرس صدا و سیما شبکه زاگرس در سالهای متمادی
+                    <br>مدرس شبکه پنج تهران در برنامه به خانه برمیگردیم
+                    <br>مدرس شبکه سه سیما در برنامه کوک طلایی<br>محقق در زمینه پوشش بانوان در دانشگاه آزاد اسلامی<br>گواهینامه
+                    مهارت در تمام زمینه های رشته طراحی و دوخت
+                    <br> کسب مقام برتر توسط هنرجویان در المپیاد<br> عضو کمیته بانک سوالات آزمون<br> مربی نمونه استان در
+                    سال ۱۳۸۹ – ۱۳۹۵
+                    <br> مدیر نمونه استان در سال ۱۳۹۱ – ۱۳۹۳</p>
+                <div class="text-center text-md-start">
+                    <a href="#" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        مطالعه بیشتر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- posts -->
+<div class="py-4" id="navbarBlog">
+    <main class="container">
+        <h2 class="text-center display-5 mt-5">آموزش های ترم جدید در آموزشگاه</h2>
+        <p class="lead text-muted mb-5 pb-3 text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، </p>
+        <div class="row">
+            {% for course in course %}
+                <div class="col-lg-4">
+                    <div class="card mb-3 shadow">
+                        {% thumbnail course.img "400x500" crop="center" as im %}
+                            <img src="{{ im.url }}" class="responsive-img" width="{{ im.width }}"
+                                 height="{{ im.height }}">
+                        {% endthumbnail %}
+                        <div class="card-body">
+                            <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>
+                            <h5 class="card-title mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                استفاده از طراحان گرافیک است.</h5>
+                            <a href="#" class="card-text fs-5 pb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg>
+                                بیشتر
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {#            <div class="col-lg-4">#}
+                {#                <div class="card mb-3 shadow">#}
+                {#                    <img src="{% static 'base/img/zakhim2.jpeg' %}" class="card-img-top" alt="...">#}
+                {#                    <div class="card-body">#}
+                {#                        <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>#}
+                {#                        <h5 class="card-title mb-4">شروع کلاس های آموزش نازک دوز و ضخیم دوز.</h5>#}
+                {#                        این کلاس ها پیشنیاز دوره شب و عروس میباشد که توسط بهترین استاتید تدرسی میگردد.#}
+                {#                        <a href="#" class="card-text fs-5 pb-2">#}
+                {#                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"#}
+                {#                                 class="bi bi-arrow-left" viewBox="0 0 16 16">#}
+                {#                                <path fill-rule="evenodd"#}
+                {#                                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>#}
+                {#                            </svg>#}
+                {#                            بیشتر#}
+                {#                        </a>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#            </div>#}
+                {#            <div class="col-lg-4">#}
+                {#                <div class="card mb-3 shadow">#}
+                {#                    <img src="{% static 'base/img/olgo.jpeg' %}" class="card-img-top" alt="...">#}
+                {#                    <div class="card-body">#}
+                {#                        <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>#}
+                {#                        <h5 class="card-title mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با#}
+                {#                            استفاده از طراحان گرافیک است.</h5>#}
+                {#                        <a href="#" class="card-text fs-5 pb-2">#}
+                {#                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"#}
+                {#                                 class="bi bi-arrow-left" viewBox="0 0 16 16">#}
+                {#                                <path fill-rule="evenodd"#}
+                {#                                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>#}
+                {#                            </svg>#}
+                {#                            بیشتر#}
+                {#                        </a>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#            </div>#}
+            {% endfor %}
+        </div>
+    </main>
+</div>
+
+<!-- Our Team -->
+
+<!-- Frequently asked questions -->
+
+<!-- Contact -->
+
+<!-- Footer -->
+<div class="py-4 text-white" style="background-color: #081828">
+    <footer class="container pt-2">
+        <div class="row py-2">
+            <div class="col-md-3">
+                <h2 class="mb-4">آموزشگاه پورموسی</h2>
+                <p> تهران, گیشا, کوی نصر , نبش خیابان بیستم , پلاک 169 , طبقه 4 , واحد 20</p>
+            </div>
+            <div class="col-md-3">
+                <h3 class="border-start border-4 border-primary ps-3">تماس</h3>
+                <ul class="list-unstyled mt-4">
+                    <li>
+                        <a href="#" class="text-decoration-none" style="color: #ddd">02186013632</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none" style="color: #ddd">09123957215</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center"> طراح و توسعه دهنده: <a href="farhadshakiba.com" class="text-decoration-none"
+                                                         style="color: #ddd"> www.farhadshakiba.com </a></div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+</html>
