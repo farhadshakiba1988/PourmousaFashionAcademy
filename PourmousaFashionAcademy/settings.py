@@ -25,9 +25,9 @@ LOGIN_URL = 'account:login'
 SECRET_KEY = 'django-insecure-!l3=ofi)z+rgqhxf-4(%01+4gmg(toj0n$^vc0dy!jd^5r=2*0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -78,17 +78,6 @@ WSGI_APPLICATION = 'PourmousaFashionAcademy.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": "postgres",
-#         "USER": "postgres",
-#         "PASSWORD": "test",
-#         "HOST": "127.0.0.1",
-#         "PORT": "5432",
-#     }
-# }
 
 DATABASES = {
     'default': {
