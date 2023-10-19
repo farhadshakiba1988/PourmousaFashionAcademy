@@ -1,382 +1,1217 @@
-{% load static %}
-{% static 'images' as baseUrl %}
-{% load thumbnail %}
-<!doctype html>
+﻿{% load static %}
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
-          integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="HTML5,CSS3,HTML,Template,multi-page,Ecour - Education Courses & Training HTML Template" >
+<meta name="description" content="Ecour - Education Courses & Training HTML Template">
+<meta name="author" content="Barat Hadian">
 
-    <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-        body {
-            font-family: Sahel;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="{% static 'base/css/reboot.css' %}">
+<title>Ecour - قالب HTML ایکور , پوسته سایت شرکتی دوره های آموزشی و یادگیری</title>
 
-    <title>PourmousaFashionAcademy</title>
+<link rel="shortcut icon" href="{% static 'base/img/favicon.png'%}" type="image/png">
+
+<link href="{% static 'base/css/bootstrap.min.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/jquery-ui-min.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/line-awesome.min.css'%}" rel="stylesheet">
+<link href="{% static 'base/css/remixicon.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/animate.min.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/swiper-min.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/magnific-popup.css'%}" rel="stylesheet">
+
+<link href="{% static 'base/css/style.css'%}" rel="stylesheet">
 </head>
 <body>
 
-<!-- navbar -->
-<div class="sticky-top bg-white p-2 shadow" style="--bs-bg-opacity: 0.95">
-    <nav class="navbar navbar-expand-lg navbar-light container">
-        <div class="container-fluid">
-            <a class="navbar-brand fs-4" href="#">آموزشگاه طراحی و دوخت پورموسی</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
-                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor03">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">خانه</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#navbarFeatures">ویزگی ها</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#navbarBlog">سیلابیس دروس</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#navbarTeam">تیم ما</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#navbarContact">تماس با ما</a>
-                    </li>
-                </ul>
-                <div class="d-flex justify-content-lg-end" style="width: 185px;">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#getStartedModal">
-                        شروع کنید
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+<div class="preloader js-preloader">
+<img src="{% static 'base/img/preloader.gif' %}" alt="Image">
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="getStartedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">همین حالا شروع کنید!</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="contactEmail" class="form-label"> برای عضویت در خبرنامه ایمیل حود را وارد
-                            کنید </label>
-                        <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com">
-                    </div>
-                    <button class="btn btn-primary">عضویت</button>
-                </form>
-            </div>
-        </div>
-    </div>
+
+<div class="page-wrapper">
+
+<header class="header-wrap style1">
+<div class="header-top">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="header-top-left">
+<div class="close-header-top xl-none">
+<button type="button"><i class="las la-times"></i></button>
+</div>
+<div class="header-contact">
+<p><i class="ri-map-pin-fill"></i> ایران ، استان تهران ، میدان آزادی ، خیابان 9</p>
+</div>
+<div class="header-contact">
+<a href="mailto: info@ecour.com "><i class="ri-mail-send-line"></i> info@ecour.com </a>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="header-top-right">
+<div class="lang_selctor  style1">
+<i class="ri-global-line"> </i>
+<select>
+<option value="1">فارسی</option>
+<option value="2">French</option>
+<option value="3">Arabic</option>
+</select>
+</div>
+<div class="header-social">
+<span>دنبال کنید :</span>
+<ul class="social-profile style3">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+<li><a target="_blank" href="https://instagram.com"> <i class="ri-instagram-line"></i> </a></li>
+</ul>
+</div>
+<a href="login.html" class="link style3"> ورود / عضویت</a>
+</div>
+</div>
+<div class="col-lg-6 xl-none">
+<div class="header-search">
+<form action="#">
+<div class="form-group">
+<input type="search" placeholder="جستجو ...">
+<button type="submit"> <i class="ri-search-eye-line"></i> </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="header-bottom">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-2 col-md-4 col-6 order-lg-1 order-md-1 order-1">
+<div class="logo">
+<a href="index.html"><img src="{% static 'base/img/logo.png' %}" alt="Image"></a>
+</div>
+</div>
+<div class="col-lg-6 col-md-3 col-6 order-lg-2 order-md-3 order-3">
+<div class="main-menu-wrap style1">
+<div class="menu-close xl-none">
+<a href="javascript:void(0)"><i class="las la-times"></i></a>
+</div>
+<div id="menu" class="text-left">
+<ul class="main-menu ">
+<li class="has-children">
+<a class="active" href="#">خانه</a>
+<ul class="sub-menu">
+<li><a class="active" href="index.html">صفحه اصلی 1</a></li>
+<li><a href="index-2.html">صفحه اصلی 2</a></li>
+<li><a href="index-3.html">صفحه اصلی 3</a></li>
+</ul>
+</li>
+<li class="has-children">
+<a href="#">دوره های آموزشی</a>
+<ul class="sub-menu">
+<li><a href="course.html">دوره های آموزشی</a></li>
+<li><a href="course-details.html">جزئیات دوره ها</a></li>
+<li class="has-children">
+<a href="#">مربیان</a>
+<ul class="sub-menu">
+<li><a href="instructors.html">مربیان</a></li>
+<li><a href="instructor-details.html">جزئیات مربیان</a></li>
+<li><a href="become-instructor.html">مربی شوید</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="#">رویدادها</a>
+<ul class="sub-menu">
+<li><a href="events.html">رویداد</a></li>
+<li><a href="event-details.html">جزئیات رویداد</a></li>
+</ul>
+</li>
+<li class="has-children"><a href="#">صفحات</a>
+<ul class="sub-menu">
+<li><a href="about.html">درباره ما</a></li>
+<li><a href="contact.html">تماس با ما</a></li>
+<li><a href="teacher.html">مربی</a></li>
+<li><a href="pricing-plan.html">پلن قیمت گذاری</a></li>
+<li><a href="testimonial.html">بازخورد مشتریان</a></li>
+<li><a href="faq.html">سوالات متداول</a></li>
+<li><a href="privacy-policy.html">حریم خصوصی</a></li>
+<li><a href="terms-condition.html">قوانین و ضوابط</a></li>
+<li><a href="404.html">خطای 404</a></li>
+</ul>
+</li>
+<li class="has-children">
+<a href="#">فروشگاه</a>
+<ul class="sub-menu">
+<li class="has-children"><a href="#">طرح بندی فروشگاه</a>
+<ul class="sub-menu">
+<li><a href="shop-left-sidebar.html">فروشگاه سایدبار 1</a></li>
+<li><a href="shop-right-sidebar.html">فروشگاه سایدبار 2</a></li>
+<li><a href="shop-no-sidebar.html">فروشگاه بدون سایدبار</a></li>
+</ul>
+</li>
+<li><a href="shop-details.html">جزئیات فروشگاه</a></li>
+<li><a href="wishlist.html">لیست علاقه مندیها</a></li>
+<li><a href="cart.html">سبد خرید</a></li>
+<li><a href="checkout.html">بررسی محصول</a></li>
+<li class="has-children"><a href="#">کاربران</a>
+<ul class="sub-menu">
+<li><a href="login.html">وارد شوید</a></li>
+<li><a href="register.html">ثبت نام</a></li>
+<li><a href="forgot-pwd.html">فراموشی گذرواژه</a></li>
+<li><a href="my-account.html">حساب کاربری</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="has-children">
+<a href="#">وبلاگ</a>
+<ul class="sub-menu">
+<li class="has-children"><a href="#">طرح بندی وبلاگ</a>
+<ul class="sub-menu">
+<li><a href="blog-left-sidebar.html">وبلاگ سایدبار 1</a></li>
+<li><a href="blog-right-sidebar.html">وبلاگ سایدبار 2</a></li>
+<li><a href="blog-no-sidebar.html">وبلاگ بدون سایدبار</a></li>
+</ul>
+ </li>
+<li class="has-children"><a href="#">جزئیات وبلاگ</a>
+<ul class="sub-menu">
+<li><a href="blog-details-left-sidebar.html">جزئیات وبلاگ سایدبار 1</a></li>
+<li><a href="blog-details-right-sidebar.html">جزئیات وبلاگ سایدبار 2</a></li>
+<li><a href="blog-details-no-sidebar.html">جزئیات وبلاگ بدون سایدبار</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="mobile-bar-wrap">
+<div class="sidebar-menu xl-none">
+<i class="ri-equalizer-line"></i>
+</div>
+<div class="mobile-top-bar xl-none">
+<i class="ri-settings-3-line"></i>
+</div>
+<div class="mobile-menu xl-none">
+<a href='javascript:void(0)'><i class="ri-menu-line"></i></a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-5  order-lg-3 order-md-2">
+<div class="header-menu-wrap">
+<div class="header-search md-none">
+<form action="#">
+<div class="form-group">
+<input type="search" placeholder="جستجو کنید ...">
+<button type="submit"> <i class="ri-search-eye-line"></i> </button>
+</div>
+</form>
+</div>
+<div class="sidebar-menu md-none">
+<i class="ri-equalizer-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="contact-popup">
+<div class="contact-popup-title">
+<button type="button" class="close-popup"> <i class="ri-close-fill"></i> </button>
+</div>
+<div class="contact-popup-wrap">
+<div class="comp-info">
+<div class="comp-logo">
+<a href="index.html"> <img src="{% static 'base/img/logo.png' %}" alt="Image"></a>
+</div>
+<p class="comp-desc">لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<ul class="footer-contact-address">
+<li><a href="tel:999762236473"> <i class="ri-phone-line"></i> +999 762 23 6473</a></li>
+<li> <i class="ri-mail-send-fill"></i> <a href="mailto: info@ecour.com "> info@ecour.com </a></li>
+<li> <i class="ri-earth-fill"></i> <a href="https://www.ecour.com">www.ecour.com</a></li>
+<li>
+<i class="ri-map-pin-fill"></i> ایران ، استان تهران ، میدان آزادی ، خیابان 9
+</li>
+</ul>
+</div>
+<div class="comp-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8385385572983!2d144.95358331584498!3d-37.81725074201705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4dd5a05d97%3A0x3e64f855a564844d!2s121%20King%20St%2C%20Melbourne%20VIC%203000%2C%20Australia!5e0!3m2!1sen!2sbd!4v1612419490850!5m2!1sen!2sbd"></iframe>
+</div>
+<div class="share-on text-center">
+<ul class="social-profile style2">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://instagram.com"> <i class="ri-instagram-line"></i> </a></li>
+</ul>
+</div>
+</div>
 </div>
 
-<!-- back to top -->
-<a href="#"
-   class="bg-warning text-dark d-flex rounded-circle justify-content-center align-items-center position-fixed opacity-75"
-   style="width: 54px; height: 54px; right: 10px; bottom: 10px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-arrow-up"
-         viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-    </svg>
+
+<div class="hero-wrap style1 bg-f hero-bg-1">
+<div class="hr-line"></div>
+<div class="hr-line"></div>
+<div class="hr-line"></div>
+<div class="hr-line"></div>
+<div class="overlay bg-black op-7"></div>
+<div class="container">
+<div class="hero-circle-shape md-none">
+<img src="{% static 'base/img/hero/circle-shape.png' %}" alt="Image">
+</div>
+<div class="hero-dot-shape md-none">
+<img src="{% static 'base/img/hero/dot-shape.png' %}" alt="Image">
+</div>
+<div class="row">
+<div class="col-lg-7 col-md-8">
+<div class="hero-content">
+<h1>خلاقیت خود را کاوش کنید
+با بهترین دوره های آنلاین</h1>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد.</p>
+<div class="hero-btn">
+<a href="course.html" class="btn v1"> <i class="ri-eye-line"></i> مشاهده دوره ها</a>
+<a href="login.html" class="btn v2"> <i class="ri-user-line"></i> عضویت رایگان</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hero-img-wrap">
+<div class="hero-ellipse-img">
+<img src="{% static 'base/img/hero/ellipse-img.jpg' %}" alt="Image">
+</div>
+
+</div>
+</div>
+
+
+<section class="about-wrap  style1 ptb-100">
+<div class="container">
+<div class="row align-items-center gx-5">
+<div class="col-lg-6">
+<div class="about-img bg-f about-bg-1">
+<div class="about-circle-shape md-none">
+<img src="{% static 'base/img/about/about-circle-shape-1.svg' %}" alt="Image">
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about-content">
+<div class="section-title text-left style1">
+<span>درباره ما</span>
+<h2>به آموزش ایکور خوش آمدید</h2>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد.</p>
+<ul class="about-features-list">
+<li> <i class="ri-login-circle-line"></i> با پرونده اداره کنید</li>
+ <li> <i class="ri-login-circle-line"></i> با اتوماسیون صرفه جویی کنید</li>
+<li> <i class="ri-login-circle-line"></i> 5000 دوره آنلاین</li>
+</ul>
+<h5>*ما <span>15 سال</span> تجربه کافی داریم</h5>
+<a href="course.html" class="btn v1"> <i class="ri-eye-line"></i> مشاهده دوره ها</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="promo-banner-wrap style1">
+<div class="promo-content  ptb-100 ">
+<h2 class="text-white">قابل اعتماد توسط 10،000+ سازمان</h2>
+<p class="text-white">لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<a href="course.html" class="btn v1"> <i class="ri-eye-line"></i> مشاهده دوره ها</a>
+</div>
+<div class="promo-img-wrap">
+<div class="promo-img bg-f promo-bg-1">
+<div class="promo-circle-shape md-none">
+<img src="{% static 'base/img/promo/promo-circle-shape.svg' %}" alt="Image">
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="course-wrap pt-100 pb-70">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title style1 text-center mb-40">
+<span>دسته بندی های برتر</span>
+<h2>دسته بندی های برتر آنلاین ما</h2>
+</div>
+</div>
+</div>
+<div class="row justify-content-md-center">
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-1.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:13</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:17</a></p>
+</li>
+ </ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span class="discount">29000 ت</span><span>25000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-2.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:12</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:11</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span class="discount">40500 ت</span><span>20000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-3.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:22</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:19</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span>30000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-4.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:5</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:9</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span>20000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-5.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:15</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:2</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span>35000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-6.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:7</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:11</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span class="discount">30500 ت</span><span>20000 ت</span></p>
+</div>
+ </div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-7.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+<p><i class="ri-user-line"></i>ک:17</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:19</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span class="discount">90500 ت</span><span>70000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style1">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-8.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<h3><a href="course-details.html">بنیاد مثبت: 
+روانشناسی</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 بازدید</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است! </p>
+</div>
+<div class="course-metainfo">
+<div class="course-metainfo-left">
+<ul>
+<li>
+ <p><i class="ri-user-line"></i>ک:12</p>
+</li>
+<li>
+<p><i class="ri-discuss-line"></i><a href="course-details.html">ن:5</a></p>
+</li>
+</ul>
+</div>
+<div class="course-metainfo-right">
+<div class="price-tag">
+<p><span>70000 ت</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="promo-banner-wrap style2">
+<div class="promo-img-wrap">
+<div class="promo-img bg-f promo-bg-1">
+<a class="video-play circle style1" href="https://www.youtube.com/watch?v=xHegpKx61eE"> <i class="ri-play-fill"></i> </a>
+<div class="promo-circle-shape md-none">
+<img src="{% static 'base/img/promo/promo-circle-shape.svg' %}" alt="Image">
+</div>
+</div>
+</div>
+<div class="promo-content  ptb-100 ">
+<h2 class="text-white">زندگی خود را از طریق آموزش دگرگون کنید</h2>
+<p class="text-white">لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+</div>
+</section>
+
+
+<section class="course-wrap pt-100 pb-70">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title style1 text-center mb-40">
+<span>دوره های محبوب</span>
+<h2>دوره های آنلاین محبوب ما</h2>
+</div>
+</div>
+</div>
+<div class="row justify-content-md-center">
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style2">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-9.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<span class="course-price">3500 ت</span>
+<h3><a href="course-details.html">دیپلم مهارت های تدریس:
+مربیان</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>4 امتیاز</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="course-metainfo">
+<p><i class="ri-user-line"></i> دانش آموزان: 14 </p>
+<p><i class="ri-book-open-line"></i><a href="course-details.html"> دروس: 4 </a></p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style2">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-10.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<span class="course-price">5500 ت</span>
+<h3><a href="course-details.html">دیپلم مهارت های تدریس:
+مربیان</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>9 امتیاز</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="course-metainfo">
+<p><i class="ri-user-line"></i> دانش آموزان: 22 </p>
+<p><i class="ri-book-open-line"></i><a href="course-details.html"> دروس: 10 </a></p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style2">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-11.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<span class="course-price">9500 ت</span>
+<h3><a href="course-details.html">دیپلم مهارت های تدریس:
+مربیان</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>10 امتیاز</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="course-metainfo">
+<p><i class="ri-user-line"></i> دانش آموزان: 22 </p>
+<p><i class="ri-book-open-line"></i><a href="course-details.html"> دروس: 12 </a></p>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6">
+<div class="course-card style2">
+<div class="course-img">
+<a href="course-details.html"><img src="{% static 'base/img/course/course-1.jpg' %}" alt="Image"></a>
+</div>
+<div class="course-info">
+<span class="course-price">5500 ت</span>
+<h3><a href="course-details.html">دیپلم مهارت های تدریس:
+مربیان</a></h3>
+<div class="course-rating">
+<ul>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-fill"></i></li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+<span>6 امتیاز</span>
+</div>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="course-metainfo">
+<p><i class="ri-user-line"></i> دانش آموزان: 16 </p>
+<p><i class="ri-book-open-line"></i><a href="course-details.html"> دروس: 8 </a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="promo-banner-wrap style3 pb-100">
+<div class="promo-content  ptb-100 ">
+<h2 class="text-white">پیشنهاد تخفیف حداکثر 15٪ برای عضویت امروز</h2>
+<p class="text-white">کاربر می تواند در موارد و پیشنهادهای لیست پاراگراف متن محتوای ساختگی ایجاد کند. بسته به نیاز شما ، یک کاربر می تواند هر یک از این قالب ها را در پروژه خود جای دهد ، که راحتی بسیاری را به شما اضافه می کند.</p>
+<a href="login.html" class="btn v1"> <i class="ri-logout-circle-r-line"></i> عضو شوید</a>
+</div>
+<div class="promo-img-wrap">
+<div class="promo-img bg-f promo-bg-3">
+<div class="promo-circle-shape md-none">
+<img src="{% static 'base/img/promo/promo-circle-shape.svg' %}" alt="Image">
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="team-wrap pb-70">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section-title style1 text-center mb-40">
+<span>برقراری ارتباط</span>
+<h2>عضو تیم ما</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="team-member">
+<div class="team-member-img">
+<img src="{% static 'base/img/team/team-member-1.jpg' %}" alt="Image">
+<ul class="social-profile style1">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+</ul>
+</div>
+<div class="team-member-info">
+<h4>تونی استارک</h4>
+<p>مدیر مالی</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="team-member">
+<div class="team-member-img">
+<img src="{% static 'base/img/team/team-member-2.jpg' %}" alt="Image">
+<ul class="social-profile style1">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+</ul>
+</div>
+<div class="team-member-info">
+<h4>تونی استارک</h4>
+<p>مدیر مالی</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="team-member">
+<div class="team-member-img">
+<img src="{% static 'base/img/team/team-member-3.jpg' %}" alt="Image">
+<ul class="social-profile style1">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+</ul>
+</div>
+<div class="team-member-info">
+<h4>تونی استارک</h4>
+<p>مدیر مالی</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="team-member">
+<div class="team-member-img">
+<img src="{% static 'base/img/team/team-member-4.jpg' %}" alt="Image">
+<ul class="social-profile style1">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+</ul>
+</div>
+<div class="team-member-info">
+<h4>تونی استارک</h4>
+<p>مدیر مالی</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="testimonial-wrap bg-f testimonial-bg-1 ptb-100">
+<div class="overlay bg-midnight op-8"></div>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section-title style2 mb-40 text-center">
+<span>بازخورد مشتریان</span>
+<h2>آنچه آنها درباره ما می گویند</h2>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="testimonial-slider-one swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<div class="testimonial-item">
+ <div class="client-img">
+<img src="{% static 'base/img/testimonial/client-1.jpg' %}" alt="Image">
+</div>
+<div class="client-name">
+<h5>آلیانو مارینو</h5>
+<ul class="rating">
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+</div>
+<div class="client-quote">
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="quote-icon">
+<i class="ri-double-quotes-r"></i>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="client-img">
+<img src="{% static 'base/img/testimonial/client-2.jpg' %}" alt="Image">
+</div>
+<div class="client-name">
+<h5>آلیانو مارینو</h5>
+<ul class="rating">
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+</div>
+<div class="client-quote">
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="quote-icon">
+<i class="ri-double-quotes-r"></i>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="client-img">
+<img src="{% static 'base/img/testimonial/client-3.jpg' %}" alt="Image">
+</div>
+<div class="client-name">
+<h5>آلیانو مارینو</h5>
+<ul class="rating">
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+ <li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+</div>
+<div class="client-quote">
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="quote-icon">
+<i class="ri-double-quotes-r"></i>
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+<div class="testimonial-item">
+<div class="client-img">
+<img src="{% static 'base/img/testimonial/client-4.jpg' %}" alt="Image">
+</div>
+<div class="client-name">
+<h5>آلیانو مارینو</h5>
+<ul class="rating">
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-fill"></i> </li>
+<li> <i class="ri-star-line"></i> </li>
+</ul>
+</div>
+<div class="client-quote">
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است. </p>
+</div>
+<div class="quote-icon">
+<i class="ri-double-quotes-r"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="testimonial-pagination"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="blog-wrap pt-100 pb-70">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="section-title style1 text-center mb-40">
+<span>وبلاگ ما</span>
+<h2>آخرین اخبار وبلاگ</h2>
+</div>
+</div>
+</div>
+<div class="row justify-content-md-center">
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card">
+<a href="blog-details-right-sidebar.html" class="blog-img">
+<img src="{% static 'base/img/blog/blog-1.jpg' %}" alt="Image">
 </a>
+<div class="blog-info">
+<div class="blog-date">
+<h6><span>25</span>دی 1399</h6>
+</div>
+<h3><a href="blog-details-right-sidebar.html">دوره های برتر آنلاین برای دانشجویان و معلمان خارجی</a></h3>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<div class="blog-author-wrap">
+<div class="blog-author">
+<div class="blog-author-img">
+<img src="{% static 'base/img/blog/author-1.jpg' %}" alt="Image">
+</div>
+<div class="blog-author-name">
+<p>توسط <a href="blog-details-left-sidebar.html">مارک جان</a></p>
+</div>
+</div>
+<a href="blog-details-right-sidebar.html" class="read-more"><i class="las la-arrow-left"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card">
+<a href="blog-details-right-sidebar.html" class="blog-img">
+<img src="{% static 'base/img/blog/blog-2.jpg' %}" alt="Image">
+</a>
+<div class="blog-info">
+<div class="blog-date">
+<h6><span>25</span>دی 1399</h6>
+</div>
+<h3><a href="blog-details-right-sidebar.html">دوره های برتر آنلاین برای دانشجویان و معلمان خارجی</a></h3>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<div class="blog-author-wrap">
+<div class="blog-author">
+<div class="blog-author-img">
+<img src="{% static 'base/img/blog/author-2.jpg' %}" alt="Image">
+</div>
+<div class="blog-author-name">
+<p>توسط <a href="blog-details-left-sidebar.html">مارک جان</a></p>
+</div>
+</div>
+<a href="blog-details-right-sidebar.html" class="read-more"><i class="las la-arrow-left"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-4 col-lg-6 col-md-6">
+<div class="blog-card">
+<a href="blog-details-right-sidebar.html" class="blog-img">
+<img src="{% static 'base/img/blog/blog-3.jpg' %}" alt="Image">
+</a>
+<div class="blog-info">
+<div class="blog-date">
+<h6><span>25</span>دی 1399</h6>
+</div>
+<h3><a href="blog-details-right-sidebar.html">دوره های برتر آنلاین برای دانشجویان و معلمان خارجی</a></h3>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<div class="blog-author-wrap">
+<div class="blog-author">
+<div class="blog-author-img">
+<img src="{% static 'base/img/blog/author-3.jpg' %}" alt="Image">
+</div>
+<div class="blog-author-name">
+<p>توسط <a href="blog-details-left-sidebar.html">مارک جان</a></p>
+</div>
+</div>
+<a href="blog-details-right-sidebar.html" class="read-more"><i class="las la-arrow-left"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-<!-- header -->
-<div class="py-4">
-    <header class="container">
-        <div class="row align-items-center">
 
-            <div class="col-md-6">
+<footer class="footer-wrap style1 bg-heath">
+<div class="footer-top pt-100 pb-70">
+<div class="container">
+<div class="row ">
+<div class="col-lg-4 col-md-6 col-sm-6">
+<div class="footer-widget">
+<a href="index.html" class="footer-logo"><img src="{% static 'base/img/logo-white.png' %}" alt="Image"></a>
+<p>لورم ایپسوم ساختار چاپ و متن را در بر می گیرد. لورم ایپسوم استاندارد صنعت بوده است.</p>
+<h4 class="footer-widget-title">خبرنامه</h4>
+<form action="#" class="newsletter-wrap">
+<div class="form-group">
+<input type="text" placeholder="آدرس ایمیل شما ..">
+<button type="submit" class="submit-btn"> <i class="lab la-telegram-plane"></i></button>
+</div>
+</form>
+<p>ما اسپم ارسال نمی کنیم!</p>
+</div>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6">
+<div class="footer-widget ml-30">
+<h4 class="footer-widget-title">پشتیبانی</h4>
+<ul class="footer-menu">
+<li><a href="faq.html">کمک (سوالات متداول)</a></li>
+<li><a href="contact.html">تماس با ما</a></li>
+<li><a href="about.html">درباره ایکور</a></li>
+<li><a href="privacy-policy.html">حریم خصوصی</a></li>
+<li><a href="terms-condition.html">قوانین و ضوابط</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-2 offset-lg-1 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h4 class="footer-widget-title">لینکهای مفید</h4>
+<ul class="footer-menu">
+<li><a href="course.html">عکاسی</a></li>
+<li><a href="course.html">ایکور حرفه ای</a></li>
+<li><a href="course.html">طراحی وب</a></li>
+<li><a href="course.html">طراحی گرافیک</a></li>
+<li><a href="course.html">علوم کامپیوتر</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-6">
+<div class="footer-widget">
+<h4 class="footer-widget-title">تماس با ما</h4>
+<ul class="footer-contact-address">
+<li><a href="tel:999762236473"> <i class="ri-phone-line"></i> +999 762 23 6473</a></li>
+<li> <i class="ri-mail-send-fill"></i> <a href="mailto: info@ecour.com "> info@ecour.com </a></li>
+<li> <i class="ri-earth-fill"></i> <a href="https://www.ecour.com">www.ecour.com</a></li>
+</ul>
+<div class="share-on">
+<span>دنبال کنید :</span>
+<ul class="social-profile">
+<li><a target="_blank" href="https://facebook.com"><i class="ri-facebook-fill"></i> </a></li>
+<li><a target="_blank" href="https://twitter.com"> <i class="ri-twitter-fill"></i> </a></li>
+<li><a target="_blank" href="https://linkedin.com"> <i class="ri-linkedin-fill"></i> </a></li>
+<li><a target="_blank" href="https://instagram.com"> <i class="ri-instagram-line"></i> </a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-12 col-md-8">
+<div class="copyright-text">
+<p>کپی رایت <span class="las la-copyright"></span> 1400 ایکور. تمام حقوق قالب محفوظ است. طراحی توسط <a href="https://www.rtl-theme.com/author/barat" target="_blank">Barat Hadian</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
 
-                <h4 class="mb-4">مدیر و موسس <br><span class="text-gray-dark">استاد فاطمه پورموسی<br><br><br></span>
-                    آینده حرفه ای و کاری خود را بسازید</h4>
-                <p class="lead text-muted mb-4">مدیر و مربی نمونه سال های 1389, 1391, 1393, 1394 <br>مدرس جهاد
-                    دانشگاهی
-                    و مجله کودک در رشته تخصصی لباس عروس<br>مدرس شبکه سه سیما و شبکه پنج سیما (به خانه بر می
-                    گردیم)<br>آموشگاه
-                    منتحب هشتمین جشنواره بین المللی فجر</p>
-                <div class="text-center text-md-start">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#getStartedModal">
-                        شروع کنید
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'base/img/1.jpg' %}" class="img-fluid " width="460px">
-            </div>
-        </div>
-    </header>
 </div>
 
-<!-- Features -->
-<div class="py-4 bg-primary" id="navbarFeatures">
-    <section class="container">
-        <h2 class="text-center display-5 mt-5">امتیازات آموشگاه</h2>
-        <p class="lead text-muted mb-5 pb-3 text-center">تدریس دروس توسط استاد فاطمه پور موسی و دیگر اساتید برتر
-            کشور<br>اعطای مدرک بین المللی<br>پیش نیاز آزمون فنی حرفه ای و معرفی برای آزمون فنی حرفه ای کشور</p>
-        <div class="row gy-4 pb-5">
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/nazok.jpg' %}" width="120" height="120"/>
-                        <h5 class="card-title mt-4">نازک دوزی و ضخیم دوزی</h5>
-                        <p class="card-text text-muted lead">یک دوره کامل که پس از گذراندن آن تمام احتیاجات خود و
-                            خانواده تان را به طور کامل برآورده کرده و با گرفتن مدرک می توانید پایه و اساس مزون خود را
-                            راه اندازی کنید</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/shab.jpg' %}" width="120" height="120"/>
 
-                        <h5 class="card-title mt-4"> لباس شب</h5>
-                        <p class="card-text text-muted lead">ما مفتخریم که می توانیم دوره های فوق تخصص شب و عروس را با
-                            بروزترین متد های اروپایی برگزار کنیم<br>هنرجویان دوره تخصصی لباس شب و عروس ما از تهران و
-                            اکثر شهرهای ایران می باشند</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/shab.jpg' %}" width="120" height="120"/>
+<a href="#" class="back-to-top bounce"><i class="las la-arrow-up"></i></a>
 
-                        <h5 class="card-title mt-4">دوره فوق تخصص دراپاژ و دراپینگ</h5>
-                        <p class="card-text text-muted lead"> گذراندن این دوره هنرجو می بایست به تمامی رمز خیاطی آشنایی
-                            داشته باشد و دوره شب و مجلسی و عروس به ویژه مولاژ را گذرانده باشد ، زیرا پیش نیاز این دوره
-                            آشنایی به ساخت مانکن و کار با آن می باشد</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/tarh.jpg' %}" width="120" height="120"/>
 
-                        <h5 class="card-title mt-4">دوره طراحی لباس</h5>
-                        <p class="card-text text-muted lead">دوره طراحی ما شامل سه دوره مقدماتی پیشرفته و فوق پیشرفته می
-                            باشد که در پایان دوره هنرجویان مستعد و خلاق ، به تولیدی های معروف و برند ها معرفی می شوند پس
-                            از کسب مدرک طراحی خود به راحتی می‌توانند جذب بازار کار شوند</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/tanbor.jpg' %}" width="120" height="120"/>
+<script src="{% static 'base/js/jquery.min.js' %}"></script>
 
-                        <h5 class="card-title mt-4">دوره سوزن تنبور</h5>
-                        <p class="card-text text-muted lead"> جدیدترین دوره‌ای که در حال حاضر در ایران برگزار می گردد و
-                            روش آشنایی با سوزن تنبور ، شناخت کارگاه ، وصل پارچه های کشی تور به کارگاه ، آشنایی با مواد و
-                            ابزار لازم ، از مشخصات این دوره می باشد</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="card p-5">
-                    <div class="card-body text-center">
-                        <img class="text-primary" src="{% static 'base/img/digar.png' %}" width="120" height="120"/>
+<script src="{% static 'base/js/jquery-ui.min.js' %}"></script>
 
-                        <h5 class="card-title mt-4">از دیگر آموزش های آکادمی پورموسی</h5>
-                        <p class="card-text text-muted lead"> الگوسازی و برشکاری ، مانتو دوز ، یقه های سه بعدی ، جیب های
-                            فانتزی ، چهل تیکه دوزی با دست و چرخ و… می باشد که هرکدام تنوع و زیبایی خاص خود را دارد.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+<script src="{% static 'base/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'base/js/bootstrap-validator.js' %}"></script>
+<script src="{% static 'base/js/form-validation.js' %}"></script>
 
-<!-- vuejs -->
-<div class="py-4">
-    <section class="container">
-        <div class="row align-items-center" style="height: 450px">
-            <div class="col-md-6">
-                <h2 class="display-4 mb-4"><span style="color: #4dba87;">با شما</span> هستیم <span
-                        style="color: #4dba87;">تا اوج </span> موفقیت</h2>
-                <p class="lead mb-4" style="color: #800080;">آشنایی بیشتر با نحوه برگزاری کلاس های آموزشگاه خیاطی
-                    پورموسی</p>
-                <p class="lead text-muted mb-4">کلاس ها تک ساعتی که در برگه قرارداد کارآموزی بین هنرجو آکادمی طراحی دوخت
-                    پورموسی منعقد می گردد برگزار می‌شود ، آکادمی متعهد می شود قرارداد ساعت های آموزشی خود را به پایان
-                    برساند و این نویدی است برای هنرجویانی که دوره‌های خاص و کوتاه مدت را انتخاب می کنند. تمامی کلاس ها
-                    به صورت عمومی برگزار می گردد و این کلاس‌ها در هنرجویان انگیزه بیشتری ایجاد می کند چون علاوه بر کار
-                    خود و معایب آن با کار هنرجویان دیگر و معایب اندامی افراد مختلف آشنا می‌شوند به این روش تدریس بهترین
-                    و بیشترین بازده و راندمان کاری را دارد</p>
-                <div class="text-center text-md-start">
-                    <a href="#" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                        مطالعه بیشتر
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <img src="{% static 'base/img/ouj.jpg' %}" class="img-fluid" width="340">
-            </div>
-        </div>
-    </section>
-</div>
+<script src="{% static 'base/js/swiper-min.js' %}"></script>
 
-<!-- reactjs -->
-<div class="py-4" style="background-color: #081828;">
-    <section class="container">
-        <div class="row align-items-center" style="height: 550px">
-            <div class="col-md-6">
-                <img src="{% static 'base/img/svab.jpg' %}" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <h2 class="display-10 mb-4 text-white">سوابق و مهارت های <span class="text-warning">استاد پورموسی</span>
-                </h2>
-                <p class="lead text-white mb-4">مدیر و موسس و مربی در کلیه رشته های طراحی و دوخت از سال ۱۳۷۲ تاکنون
-                    (دریافت مجوز تاسیس در سال ۱۳۷۲ در شهر تهران)
-                    <br>مدرس صدا و سیما شبکه زاگرس در سالهای متمادی
-                    <br>مدرس شبکه پنج تهران در برنامه به خانه برمیگردیم
-                    <br>مدرس شبکه سه سیما در برنامه کوک طلایی<br>محقق در زمینه پوشش بانوان در دانشگاه آزاد اسلامی<br>گواهینامه
-                    مهارت در تمام زمینه های رشته طراحی و دوخت
-                    <br> کسب مقام برتر توسط هنرجویان در المپیاد<br> عضو کمیته بانک سوالات آزمون<br> مربی نمونه استان در
-                    سال ۱۳۸۹ – ۱۳۹۵
-                    <br> مدیر نمونه استان در سال ۱۳۹۱ – ۱۳۹۳</p>
-                <div class="text-center text-md-start">
-                    <a href="#" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                        مطالعه بیشتر
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+<script src="{% static 'base/js/jquery-magnific-popup.js' %}"></script>
 
-<!-- posts -->
-<div class="py-4" id="navbarBlog">
-    <main class="container">
-        <h2 class="text-center display-5 mt-5">آموزش های ترم جدید در آموزشگاه</h2>
-        <p class="lead text-muted mb-5 pb-3 text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، </p>
-        <div class="row">
-            {% for course in course %}
-                <div class="col-lg-4">
-                    <div class="card mb-3 shadow">
-                        {% thumbnail course.img "400x500" crop="center" as im %}
-                            <img src="{{ im.url }}" class="responsive-img" width="{{ im.width }}"
-                                 height="{{ im.height }}">
-                        {% endthumbnail %}
-                        <div class="card-body">
-                            <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>
-                            <h5 class="card-title mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                                استفاده از طراحان گرافیک است.</h5>
-                            <a href="#" class="card-text fs-5 pb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                     class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                </svg>
-                                بیشتر
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<script src="{% static 'base/js/countdown.js' %}"></script>
 
-                {#            <div class="col-lg-4">#}
-                {#                <div class="card mb-3 shadow">#}
-                {#                    <img src="{% static 'base/img/zakhim2.jpeg' %}" class="card-img-top" alt="...">#}
-                {#                    <div class="card-body">#}
-                {#                        <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>#}
-                {#                        <h5 class="card-title mb-4">شروع کلاس های آموزش نازک دوز و ضخیم دوز.</h5>#}
-                {#                        این کلاس ها پیشنیاز دوره شب و عروس میباشد که توسط بهترین استاتید تدرسی میگردد.#}
-                {#                        <a href="#" class="card-text fs-5 pb-2">#}
-                {#                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"#}
-                {#                                 class="bi bi-arrow-left" viewBox="0 0 16 16">#}
-                {#                                <path fill-rule="evenodd"#}
-                {#                                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>#}
-                {#                            </svg>#}
-                {#                            بیشتر#}
-                {#                        </a>#}
-                {#                    </div>#}
-                {#                </div>#}
-                {#            </div>#}
-                {#            <div class="col-lg-4">#}
-                {#                <div class="card mb-3 shadow">#}
-                {#                    <img src="{% static 'base/img/olgo.jpeg' %}" class="card-img-top" alt="...">#}
-                {#                    <div class="card-body">#}
-                {#                        <p class="card-text"><small class="text-muted">۳ دقیقه قبل</small></p>#}
-                {#                        <h5 class="card-title mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با#}
-                {#                            استفاده از طراحان گرافیک است.</h5>#}
-                {#                        <a href="#" class="card-text fs-5 pb-2">#}
-                {#                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"#}
-                {#                                 class="bi bi-arrow-left" viewBox="0 0 16 16">#}
-                {#                                <path fill-rule="evenodd"#}
-                {#                                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>#}
-                {#                            </svg>#}
-                {#                            بیشتر#}
-                {#                        </a>#}
-                {#                    </div>#}
-                {#                </div>#}
-                {#            </div>#}
-            {% endfor %}
-        </div>
-    </main>
-</div>
-
-<!-- Our Team -->
-
-<!-- Frequently asked questions -->
-
-<!-- Contact -->
-
-<!-- Footer -->
-<div class="py-4 text-white" style="background-color: #081828">
-    <footer class="container pt-2">
-        <div class="row py-2">
-            <div class="col-md-3">
-                <h2 class="mb-4">آموزشگاه پورموسی</h2>
-                <p> تهران, گیشا, کوی نصر , نبش خیابان بیستم , پلاک 169 , طبقه 4 , واحد 20</p>
-            </div>
-            <div class="col-md-3">
-                <h3 class="border-start border-4 border-primary ps-3">تماس</h3>
-                <ul class="list-unstyled mt-4">
-                    <li>
-                        <a href="#" class="text-decoration-none" style="color: #ddd">02186013632</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-decoration-none" style="color: #ddd">09123957215</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <hr>
-        <div class="text-center"> طراح و توسعه دهنده: <a href="farhadshakiba.com" class="text-decoration-none"
-                                                         style="color: #ddd"> www.farhadshakiba.com </a></div>
-    </footer>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
+<script src="{% static 'base/js/main.js' %}"></script>
 </body>
 </html>
+
